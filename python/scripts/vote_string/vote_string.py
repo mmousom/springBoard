@@ -18,12 +18,12 @@ available on any string, you will find enough tools to do this.
 
 votes = "y y n N Y Y n n N y Y n Y"
 
-#Clean the data
+# Clean the data
 votes = votes.lower()
 
 yesVote = votes.count("y")
 noVote = votes.count("n")
 
 print "Vote result outcome :"
-print "% yes :" yesVote "%ge : " yesVote/(yesVote/noVote)
-print "% no :"  noVote  "%ge : " noVote/(yesVote/noVote)
+print "% yes :" + yesVote + "%ge : " + yesVote / (yesVote / noVote)
+print "% no :" + noVote + "%ge : " + noVote / (yesVote / noVote)

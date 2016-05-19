@@ -25,7 +25,7 @@ def fact(n):
 	if n<0:
 		print "Invalid Number, factorial can't be computed"
 	return n* fact(n-1)
-		
+
 
 def gendic():
     print "Enter an integer :"
@@ -33,8 +33,8 @@ def gendic():
     dic=dict()
     for i in range(1,n+1):
         dic[i]=i*i
-    return dic    
-    
+    return dic
+
 def convert():
     print "Enter numbers separated by comma:"
     l=raw_input()
@@ -42,7 +42,7 @@ def convert():
     t=tuple(v)
     print v
     print t
-    				
+
 
 class InputOutputString(object):
 	def __init__(self):
@@ -55,7 +55,7 @@ class InputOutputString(object):
 	    return "{} (s='{}')".format(self.__class__.__name__,self.s)
 	def __str__(self):
 	    return self.__class__.__name__
-import math	    
+import math
 def q6():
     c=50
     h=30
@@ -63,8 +63,8 @@ def q6():
     d=[x for x in raw_input().split(',')]
     for dd in d:
         value=math.sqrt((2 * c * float(dd)/h))
-    return value    
-    
+    return value
+
 def q7():
     inputStr=raw_input()
     dimensions=[int(x) for x in inputStr.split(',')]
@@ -74,13 +74,13 @@ def q7():
     for r in range(rowNum):
         for c in range(colNum):
             multiList[r][c]=r*c
-    return multiList            
+    return multiList
 
 def q8():
     pinputList=[x for x in raw_input().split(',')]
     pinputList.sort()
     print ','.join(pinputList)
-    
+
 def q9():
     lines=[]
     while True:
@@ -90,22 +90,22 @@ def q9():
         else:
              break;
     for x in lines:
-       print x                 
-       
+       print x
+
 def q10():
     lines=[ x for x in raw_input().split(" ")]
     linesset=" ".join(sorted(set(lines)))
-    print linesset    
-    
+    print linesset
+
 def q11():
     values=[]
     numlist=[x for x in raw_input().split(",")]
     for i in numlist:
         intp = int(i,2)
         if intp%5 == 0:
-            values.append(i)    
-    print ",".join(values)        
-    
+            values.append(i)
+    print ",".join(values)
+
 def q12(lrange=1000,urange=3001):
     values=[]
     xx=[str(i) for i in range(lrange,urange+1,2)]
@@ -114,7 +114,7 @@ def q12(lrange=1000,urange=3001):
         if (int(x[0])%2== 0 and int(x[1])%2==0 and int(x[2])%2==0 and int(x[3])%2==0):
             values.append(x)
     return ','.join(values)
-    
+
 def q13():
     inp=raw_input()
     d={"LETTERS":0,"NUMBERS":0}
@@ -126,9 +126,9 @@ def q13():
         else:
             pass
     print "LETTERS :",d["LETTERS"]
-    print "NUMBERS :",d["NUMBERS"]     
-    
-def q14():                                  
+    print "NUMBERS :",d["NUMBERS"]
+
+def q14():
     inp = raw_input()
     d={"Upper":0,"Lower":0}
     for c in inp:
@@ -138,7 +138,7 @@ def q14():
         	d["Upper"]+=1
         else:
         	pass
-    print d    			
+    print d
 
 def q15():
 	a=raw_input()
@@ -151,7 +151,7 @@ def q16():
 	l=raw_input()
 	x=[i for i in l.split(",") if int(i)%2!=0]
 	print ",".join(x)
-    
+
 def q17():
         netAmount=0
 	while True:
@@ -163,11 +163,11 @@ def q17():
 		amount=int(values[1])
 		if operation == "D":
 			netAmount=amount+netAmount
-		if operation == "W":				
+		if operation == "W":
 			netAmount=-amount+netAmount
 		else:
-			pass	
-	print netAmount    	
+			pass
+	print netAmount
 
 import re
 def q18():
@@ -188,9 +188,9 @@ def q18():
 		elif not (re.search("[$#@]",p)):
 			continue
 		else:
-			pass			
+			pass
 		value.append(p)
-	print ",".join(value)	
+	print ",".join(value)
 
 from operator import itemgetter, attrgetter
 def q19():
@@ -207,14 +207,14 @@ def q20(x,*args):
 	for i in args:
 		total=total+i
 	print total
-	
+
 def q21(x,**kwargs):
 	""" this is an example of keywords args"""
 	total=x
 	for arg,value in kwargs.items():
 		print "adding ", arg
 		total+=int(value)
-	print "Total =",total	
+	print "Total =",total
 
 def foo(*args,**kwargs):
 	print args, kwargs
@@ -229,15 +229,15 @@ def q22():
 		directions=s.split(" ")
 		if directions[0]=="UP":
 			pos[0]+=int(directions[1])
-		if directions[0]=="DOWN":	
+		if directions[0]=="DOWN":
 			pos[0]-=int(directions[1])
-		if 	directions[0]=="RIGHT":	
+		if 	directions[0]=="RIGHT":
 			pos[1]+=int(directions[1])
-		if 	directions[0]=="LEFT":	
+		if 	directions[0]=="LEFT":
 			pos[1]-=int(directions[1])
 		else:
 			pass
-	return math.sqrt(pos[0]*pos[0]+pos[1]*pos[1])		
+	return math.sqrt(pos[0]*pos[0]+pos[1]*pos[1])
 
 def q23():
 	dic={}
@@ -252,9 +252,9 @@ def q23():
 			else:
 				dic[i]=1
 	k=dic.keys()
-	k.sort()				
+	k.sort()
 	for w in k:
-		print "%s : %d" % (w,dic[w])		
+		print "%s : %d" % (w,dic[w])
 
 class Person:
 	# define class parameter nameS
@@ -273,4 +273,86 @@ class ReverseIterator(object):
 		if self.index>=0:
 			return self.list[self.index]
 		else:
-			raise StopeIteration()		
+			raise StopeIteration()
+
+def summation(x):
+	sum=0
+	if type(x)!=int:
+		return  "Error 404"
+	for i in range(1,x+1):
+		sum+=i
+	return sum
+
+def sumsmart(x):
+	return x*(x+1)/2 if isinstance(x,int) else "Error 404"
+
+def friend(x):
+	myfriend=[]
+	for i in x:
+		if len(i) == 4:
+			myfriend.append(i)
+	return myfriend
+
+def smartfriend(x):
+	return [f for f in x if len(f)==4]
+
+class Block:
+	def __init__(self,list):
+		self.width=list[0]
+		self.length=list[1]
+		self.height=list[2]
+
+	def get_width(self):
+		return self.width
+	def get_height(self):
+		return self.height
+	def get_length(self):
+		return self.length
+	def get_volume(self):
+		return self.width*self.length*self.height
+	def get_surface_area(self):
+		return 2*(self.width*self.length+self.length*self.height+self.height*self.width)
+
+def trigrams(phrase):
+	phrase=phrase.replace(" ","_")
+	return " ".join([phrase[i:i+3] for i in range(len(phrase)-2)])
+
+def identify_weapon(character):
+	weapon={'Cragger':'Vengdualize',
+			'Mousom':'Sarcasm',
+			'Annika':'Humility',
+			'Lopita':'Compassion'}
+	print weapon.get(character,'Not a valid character')
+	try:
+		print weapon[character]
+	except:
+		print 'Not a valid character'
+def count(array):
+	d={}
+	for i in array:
+		if d.has_key(i):
+			d[i]+=1
+		else:
+			d[i]=1
+	return d
+
+from collections import Counter
+
+
+def cnt_1(array):
+	return Counter(array)
+
+
+def cnt_2(array):
+	ed = {}
+	for i in array:
+		ed[i] = ed.get(i, 0)+1
+	return ed
+	
+def findFactors(x):
+    ll = ()
+    for i in range(1,int(math.sqrt(x))+1):
+        if x%i == 0:
+           ll.append(i,x/i) 
+    return set(ll)
+    	
