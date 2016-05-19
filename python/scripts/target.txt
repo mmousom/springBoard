@@ -1,0 +1,3 @@
+File Truncated
+File Read
+File rewritten with garbage
